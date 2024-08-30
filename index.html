@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+  </head>
+  
+  <body>
+    <header>
+      <img src="https://bgare.net/files/img/companies/yUyDL2hbvxp30HHcH3dCqqDBH8GW5impD3izCat2.png" width="30%">
+    </header>
+    
+    <main>
+
+      <form id="theForm">
+        <h2>Dilnia Insurance Form</h2>
+        <img src="car.png" alt="car" class="carImg">
+        <label>Name: </label> <input id="cusName" type="text" placeholder="Enter your name"><br>
+        <label>Age: </label><input id="cusAge" type="text" placeholder="Enter your age"><br>
+        <label>Phone Number: </label><input id="cusPhone" type="text" placeholder="Enter your phone Number"><br>
+        
+        <label for="vehicle">Choose your vehicle</label>
+        <select id="vehicle" >
+          <option value=""> </option>
+          <option value="Car">Car</option>
+          <option value="Truck">Truck</option>
+          <option value="Bus">Bus</option>
+        </select><br>
+       
+        <label for="brand">Vehicle Brand</label> 
+        <select id="brand" >
+          
+        </select> <br>
+        
+        <label for="model">Vehicle Model</label>
+        <select id="model" >
+          
+        </select>
+        <br>
+        
+        <label for="value">Vehicle Value:</label>
+        <input type="number" id="value" placeholder="Enter the car value" ><br>
+        
+        <label>Km Reached: </label> <input type="number" placeholder="Enter the car distance" id="kmReached"> <br>
+        
+        <label>Car Number: </label><input type="text" id="carNum" placeholder="Enter the car number" ><br>
+        
+        <label>Car Color: </label><input id="carColor" type="text" placeholder="Enter the car color" ><br>
+        
+        <label>Driver Licence Number:</label> <input id="licNum" type="text" placeholder="Enter the licence number" class="dln"> <br>
+        
+        <label>Car's Registration Number:</label> <input id="carReg" type="number" placeholder="Enter the Registration number"  class="crn"> <br>
+        
+        <label>Vehicle Condition: </label> 
+        <input id="new" type="radio" name="carState" value="New"> <label for="new">New</label> &nbsp;  &nbsp;
+        <input id="used" type="radio" name="carState" value="Used"> <label for="used">Used</label><br>
+        
+        
+        <label>Start Date</label> <input type="date"  id="startDate" onchange="calculateDays()"> &nbsp; &nbsp; &nbsp;
+        &nbsp; <label>End Date</label> <input type="date"  id="endDate" onchange="calculateDays()"> 
+          <p id="dateCalc">
+            <!--  -->
+          </p>
+        <br>
+        
+        
+        
+        <label for="insurance">Choose your plan</label>
+        <select id="insurance" >
+          <option value=""> </option>
+          <option value="0.03">3%</option>
+          <option value="0.04">4%</option>
+          <option value="0.05">5%</option>
+        </select><br>
+        
+        <select id="currType" > 
+          <option value="USD">USD</option>
+          <option value="IQD">IQD</option>
+        </select>
+        
+        <p>Insurance Price: <span id="finalResult"></span></p>
+
+        <button type="button" id="submitBtn">Submit</button>
+      </form>
+
+      <div id="report-container">
+        <div id="report">
+          <!-- Dynamically -->
+        </div>
+      </div>
+    </main>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
